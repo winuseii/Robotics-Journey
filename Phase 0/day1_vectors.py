@@ -10,11 +10,12 @@ def dot_product(v1, v2):
     return sum(a * b for a, b in zip(v1, v2))
 
 # Test vectors:
-v1 = [1, 2, 3]
-v2 = [4, 5, 6]
-print("Sum:", add_vectors(v1, v2))       
-print("Scaled:", scale_vector(v1, 2))    
-print("Dot:", dot_product(v1, v2))       
+if __name__ == "__main__":
+    v1 = [1, 2, 3]
+    v2 = [4, 5, 6]
+    print("Sum:", add_vectors(v1, v2))       
+    print("Scaled:", scale_vector(v1, 2))    
+    print("Dot:", dot_product(v1, v2))       
 
 
 # result:
