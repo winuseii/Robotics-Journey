@@ -34,4 +34,10 @@ if __name__ == "__main__":
     print("A @ B:", mat_multiply(A, B))        # [[19,22],[43,50]]
     print("A^T:", mat_transpose(A))            # [[1,3],[2,4]]
     print("I(3):", mat_identity(3))            # 3x3 identity
-    print("Av:", mat_vec_multiply(A, v))       # should give [3, 7]
+    print("Av:", mat_vec_multiply(A, v))       # gave [3, 7]
+
+
+# i understood more deeply about the uses of zip(). it is very useful for matrix operation and vectors.
+# i learnt about the list() and sum() commands
+# i understood how to logically create matrix operations in python WITHOUT the use of Numpy (very hard, very fun)
+# i also understood the use of line 26 " if __name__ == "__main__":
