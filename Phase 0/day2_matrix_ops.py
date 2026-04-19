@@ -1,4 +1,4 @@
-# phase-0/day2_matrix-ops.py
+# Day-2: Matrix Operations
 
 def mat_shape(A):
     return (len(A), len(A[0]))
