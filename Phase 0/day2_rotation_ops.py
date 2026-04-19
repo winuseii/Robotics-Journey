@@ -1,3 +1,5 @@
+# Day-2: Rotation Matrices
+
 import math
 from day2_matrix_ops import mat_multiply, mat_vec_multiply, mat_transpose
 
@@ -31,3 +33,8 @@ if __name__ == "__main__":
     R_inv = mat_transpose(R)
     should_be_identity = mat_multiply(R, R_inv)
     print("R @ R^T (should be identity):", should_be_identity)
+
+
+# i understood how to imprt functions from another python file and use it in the currennt file (cool asf)
+# i learn about rotation matrices and how imprtant it will be for me as an aspiring robotics engineer
+# R^T = R^-1 for rotation matrices.
