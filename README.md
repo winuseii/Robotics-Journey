@@ -4,10 +4,10 @@ A structured, project-based path to learning robotics from fundamentals to resea
 
 ## Structure
 - Phase 0 → Foundations (math + programming)
-- Future phases → robotics, control, perception, AI
+     - Learnt how to create and use matrix operations from scratch without the use of NumPy.
 
 ## Progress
-- Day 1: Vector operations from scratch
+- Week 1: Vector operations, Matrix operations, Rotation Matrices.
 
 ## Goal
-Build real systems. Understand deeply. Document everything.
+Build real systems. Understand deeply. Document everything. Explore evrything.
