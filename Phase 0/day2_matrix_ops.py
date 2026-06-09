@@ -37,7 +37,14 @@ if __name__ == "__main__":
     print("Av:", mat_vec_multiply(A, v))       # gave [3, 7]
 
 
-# i understood more deeply about the uses of zip(). it is very useful for matrix operation and vectors.
-# i learnt about the list() and sum() commands
+# i understood more deeply about the uses of zip(). it is very useful for matrix operation and vectors. it allows to seperate the rows as i understand it.
+# the command also allows to seperate the columns when we use zip(*A). 
+
+# i learnt about the list() and sum() commands. list() allows us to convert a zip object back into a list (convert back into a matrix). 
+# sum() allows us to sum up the elements in a list.
+
 # i understood how to logically create matrix operations in python WITHOUT the use of Numpy (very hard, very fun)
-# i also understood the use of line 26 " if __name__ == "__main__":
+
+# i also understood the use of line 26 (" if __name__ == "__main__":) which allows us to test the functions we created in the same file without having to import it. 
+# it is a very useful command for testing and debugging. it also allows us to run the file as a script without executing the test code. 
+
