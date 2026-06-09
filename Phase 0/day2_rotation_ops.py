@@ -35,6 +35,6 @@ if __name__ == "__main__":
     print("R @ R^T (should be identity):", should_be_identity)
 
 
-# i understood how to imprt functions from another python file and use it in the currennt file (cool asf)
-# i learn about rotation matrices and how imprtant it will be for me as an aspiring robotics engineer
-# R^T = R^-1 for rotation matrices.
+# i understood how to import functions from another python file and use it in the currennt file (cool asf)
+# i learn about rotation matrices and how important it will be later on
+# R^T = R^-1 for rotation(permutation) matrices.
