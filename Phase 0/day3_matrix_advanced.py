@@ -93,4 +93,4 @@ if __name__ == "__main__":
     # abs() is a function used to get the absolute value of a number. 
     # It is useful in this context to check if the matrix is singular.
 
-    #
+    # learnt about determinant and inverses and how to calculate it for 2x2 and 3x3 matrices.
