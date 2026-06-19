@@ -1,66 +1,71 @@
 # Day-3: Advanced Matrix Operations
-# Gaussian elimination, matrix inverse, determinant
+# (Gaussian elimination, matrix inverse, determinant)
 
 from day2_matrix_ops import mat_multiply, mat_identity, mat_shape
 
-def forward_elimination(A, swap=False):
-    U = [row[:] for row in A]
-    sign = 1
-    for i in range(len(A)):
-        if U[i][i] == 0:
-            for k in range(i+1, len(A)):
-                if U[k][i] != 0:
-                    U[i], U[k] = U[k], U[i]
-                    sign *= -1
-                    break
-        
-        for j in range(i+1, len(A)):
-            if U[i][i] == 0:
-                continue
-            factor = U[j][i] / U[i][i]
-            for k in range(i, len(A)):
-                U[j][k] -= factor * U[i][k]    
-    if swap:
-        return U, sign
-    return U
-
 def determinant(A):
-    U, sign = forward_elimination(A, swap=True)
-
-    det = sign
-    for i in range(len(U)):
-        det *= U[i][i]
-
+    n = mat_shape(A)
+    if n == (1, 1):
+        return A[0][0]
+    if n == (2, 2):
+        return A[0][0]*A[1][1] - A[0][1]*A[1][0]
+    det = 0
+    if n == (3, 3):
+        minor00 = A[1][1] * A[2][2] - A[1][2] * A[2][1]
+        minor01 = A[1][0] * A[2][2] - A[1][2] * A[2][0]
+        minor02 = A[1][0] * A[2][1] - A[1][1] * A[2][0]
+        det = A[0][0]*minor00 - A[0][1]*minor01 + A[0][2]*minor02
     return det
 
 def mat_inverse(A):
     n = len(A)
-
+    
+    if abs(determinant(A)) < 1e-10:
+        raise ValueError("Matrix is singular - no inverse exists")
+    
+    # Build augmented matrix [A | I]
     identity = mat_identity(n)
     aug = [A[i][:] + identity[i][:] for i in range(n)]
-
-    aug = forward_elimination(aug, swap=False)
-
-    for i in range(n-1, -1, -1):
-        if aug[i][i] == 0:
-            raise ValueError("Matrix is singular and cannot be inverted.")
-        for j in range(i-1, -1, -1):
-            factor = aug[j][i] / aug[i][i]
-            for k in range(2*n):
-                aug[j][k] -= factor * aug[i][k]
-
+    
+    # Forward elimination - make upper triangular
     for i in range(n):
+        # Make pivot = 1 by dividing entire row by pivot value
         pivot = aug[i][i]
-        for k in range(2*n):
-            aug[i][k] /= pivot
+        aug[i] = [x / pivot for x in aug[i]]
+        
+        # Eliminate column i in ALL other rows (not just below)
+        for j in range(n):
+            if i == j:
+                continue
+            factor = aug[j][i]
+            aug[j] = [aug[j][k] - factor * aug[i][k] 
+                      for k in range(2*n)]
+    
+    # Extract right half — that's the inverse
+    inverse = [aug[i][n:] for i in range(n)]
+    return inverse
 
-    # Extract inverse (right half)
-    inv = [row[n:] for row in aug]
-    return inv
+# Tests
+if __name__ == "__main__":
+    A = [[2, 1], [5, 3]]
+    A_inv = mat_inverse(A)
+    print("A_inv:", A_inv)
+    check = mat_multiply(A, A_inv)
+    print("A @ A_inv:")
+    for row in check:
+        print([round(x, 6) for x in row])  # should be identity
+    
+    # Singular matrix should raise error
+    try:
+        mat_inverse([[1,2],[2,4]])
+    except ValueError as e:
+        print("Caught expected error:", e)
+    
+    
 # ---- TESTS ----
 if __name__ == "__main__":
     import math
-    
+   # Test 2x2 
     A = [[2, 1], 
          [5, 3]]
     
@@ -71,16 +76,21 @@ if __name__ == "__main__":
     print("A_inv:", A_inv)              # [[3,-1],[-5,2]]
     
     product = mat_multiply(A, A_inv)
-    print("A @ A_inv:", product)        # [[1,0],[0,1]]
+    print("A @ A_inv:", product)        # [[1,0],[0,1]] (identity)
     
     # Test 3x3
-    B = [[1, 2, 3],
-         [0, 1, 4],
-         [5, 6, 3]]
-    B_det = determinant(B)
+    B = [[2, 2, 3],
+         [4, 9, 6],
+         [9, 8, 1]]
+    B_det = determinant(B)                # 0
     print(f"det(B) = {B_det}")
-    B_inv = mat_inverse(B)
-    check = mat_multiply(B, B_inv)
-    print("B @ B_inv:")
-    for row in check:
-        print([round(x, 6) for x in row])  
+    B_inv = mat_inverse(B)                # 
+    print("B_inv:", B_inv)
+    check = mat_multiply(B, B_inv)        
+    print(f"B @ B_inv: {check}") 
+
+
+    # abs() is a function used to get the absolute value of a number. 
+    # It is useful in this context to check if the matrix is singular.
+
+    #
