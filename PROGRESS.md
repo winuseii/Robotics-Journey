@@ -135,25 +135,23 @@ Nothing physical has been built. Nothing showable exists beyond code files.
 
 ---
 
+
 ## SESSION LOG
-
-Paste each session's log below. Newest at top.
-
-```
-SESSION LOG
-Date:
-Chat: [CODE]
-Covered:
-Artifact produced:
-Next step:
-Confidence (1-5):
-```
-
 ---
 
-### 2026-07-11 · GEN
-- Restructured project: one chat per topic, GEN as tracker, ROBOTICSS as integration.
-- Goals revised (job timeline flexible; broad engineering growth added; artifact rule added).
-- Rules set: 20-min floor, 3-hr ceiling, forced topic switching.
-- **Artifact:** this tracker.
-- **Next:** open `Arduino First Circuit (ELE)` and start.
+Date: 2026-07-11
+Chat: GEN
+Covered:
+  - Goals restructured; job timeline flexible; breadth added
+  - Chat architecture + codes locked
+  - Tracker initialized (PROGRESS.md)
+  - Sem 3 calendar ingested — started 22 Jun, midterms 13 Aug
+  - Found: 23MAT222 = probability track, free
+  - Found: zero ELE/PRG coursework this sem — fully self-driven
+  - Play identified: use 23MEE282 Design Thinking as robot vehicle
+  - Teaching model replaced: DIAGNOSE → ROUTE → BRIDGE → INTEGRATE
+Artifact produced: PROGRESS.md
+Next step: ELE Day 1 — diagnostic + first circuit
+Confidence: 5
+
+---
