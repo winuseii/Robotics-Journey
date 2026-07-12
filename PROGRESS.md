@@ -1,6 +1,6 @@
 # MASTER PROGRESS TRACKER
 
-**Owner:** V · **Started:** June 2026 · **Last updated:** 11 July 2026
+**Owner:** V · **Started:** June 2026 · **Last updated:** 12 July 2026
 
 ---
 
@@ -23,10 +23,28 @@
 |---|---|
 | Daily floor | **20 minutes. Non-negotiable.** |
 | Daily ceiling | **3 hours.** Over-scoping is what broke Day 3. |
-| Topic rotation | User's choice — but Claude forces a switch on over-indexing. |
+| Topic rotation | User's choice — Claude forces a switch on over-indexing. |
 | Session end | Every session ends with a SESSION LOG, pasted here. |
-| Artifact rule | No phase completes without a tangible, showable output. |
+| Artifact rule | **No day completes without a tangible, showable output.** |
+| Learning model | DIAGNOSE → ROUTE → BRIDGE → INTEGRATE |
 | Tone | Strict mentor. Blunt correction. No sugarcoating. |
+
+---
+
+## SEMESTER 3 — KEY DATES
+
+| Event | Date |
+|---|---|
+| Semester started | 22 Jun 2026 |
+| **Midterms begin** | **13 Aug 2026** |
+| Onam break (build window) | 25–30 Aug 2026 |
+| Last teaching day | 23 Oct 2026 |
+| End sems begin | 29 Oct 2026 |
+| Attendance floor | 75% |
+
+**Free ride:** 23MAT222 Probability & Complex Variables = the probability track, taught and graded. Attend it.
+**Zero support:** No electrical, no programming course this semester. ELE + PRG are 100% self-driven.
+**The play:** 23MEE282 Design Thinking (0-0-3-1, Wed 3-hr block) → make the robot the graded project.
 
 ---
 
@@ -46,112 +64,108 @@
 ## TRACK STATUS
 
 ### MAT — Mathematics
-**Level: 2.5** · *Furthest-along track. This is where the over-indexing risk lives.*
+**Level: 2.5** · *Furthest-along track. Over-indexing risk lives here.*
 
-| Done | |
-|---|---|
-| ✅ | MIT 18.06 Lectures 1–5 |
-| ✅ | Vector ops from scratch (no NumPy) |
-| ✅ | Matrix ops from scratch |
-| ✅ | 2D rotation matrices |
-| ✅ | Gaussian elimination |
-| ✅ | Determinant |
-| ✅ | Matrix inverse (Gauss-Jordan) |
+✅ MIT 18.06 L1–5 · vector ops from scratch · matrix ops from scratch · 2D rotation matrices · Gaussian elimination · determinant · matrix inverse (Gauss-Jordan)
 
-**Next:** Eigenvalues & eigenvectors — 3Blue1Brown ch. 1–7, then 18.06 Lecture 14, then hand derivation.
+**Next:** Eigenvalues & eigenvectors — 3B1B ch. 1–7, 18.06 L14, hand derivation.
 **Open challenge (unanswered):** kinematic singularities and the pseudo-inverse.
-**After that:** Probability (6.041) — the foundation of every sensor-fusion and SLAM algorithm.
-
----
-
-### DSA — Data Structures & Algorithms
-**Level: 0** · *Queued. Not yet begun.*
-
-**Next:** Big O properly. Then Two Sum. Then work into Blind 75.
-**Why it matters:** every serious company filters on this — including robotics companies. And graph search (A\*, Dijkstra) *is* motion planning. The overlap is real.
+**Probability:** now covered by 23MAT222 coursework. Attend. Translate to robotics.
 
 ---
 
 ### ELE — Electrical & Electronics
-**Level: 0–1** · *Amrita "Basic EEE" coursework only. Zero independent work. Zero circuits built.*
+**Level: 1.5** · *🔥 STARTED 12 July 2026. Three weeks of avoidance broken.*
 
-**Next:** Arduino is sitting unused. First real circuit + first sensor read.
-**This is your biggest silent gap.** You have hardware and haven't touched it.
+| Done | |
+|---|---|
+| ✅ | Diagnostic — 2 real misconceptions surfaced and corrected |
+| ✅ | Voltage / current / resistance (water-tank model) |
+| ✅ | LED as a diode; why current-limiting resistors exist |
+| ✅ | Resistor calculation by hand (200Ω → 220Ω standard) |
+| ✅ | Microcontroller vs. CPU; digital pins; `setup()` / `loop()`; GND |
+| ❌ | **Nothing built. Day 1 incomplete.** |
+
+**Misconceptions found:** voltage defined as "difference in resistance" · open vs. short circuit confused.
+**Live wobble:** potential vs. flow. *Ground is a reference point, not a drain.* Fix this.
+
+**Next:** Wiring plan → external LED blink → **film it** → push `day1_blink.ino` to `ELE/`.
+
+---
+
+### DSA — Data Structures & Algorithms
+**Level: 0** · *Queued. Not begun.*
+
+**Next:** Big O properly. Then Two Sum. Then into Blind 75.
+**Why:** every serious company filters on it — and graph search (A\*, Dijkstra) *is* motion planning.
 
 ---
 
 ### MEC — Mechanical & Dynamics
-**Level: 2** · *Coursework-driven. This is your degree — and your competitive edge over CS grads.*
+**Level: 2** · *Coursework-driven. Your edge over CS grads.*
 
-**Have:** Engineering Mechanics, Differential Equations (Amrita coursework).
-**Next:** Stop treating it as a course to pass. Start connecting Newton-Euler to robot dynamics explicitly.
+**Sem 3 feeds this directly:** Mechanics of Solids, Thermodynamics, Metallurgy, Manufacturing, Machine Drawing.
+**Next:** Stop treating these as courses to pass. Connect Newton–Euler to robot dynamics explicitly.
 
 ---
 
 ### PRG — Programming & Software Engineering
-**Level: 2** · *Real progress here — the from-scratch matrix library is genuine work.*
+**Level: 2** · *Real work here — the from-scratch matrix library is genuine.*
 
-**Have:** Python (loops, functions, scripting), VS Code, Git/GitHub, `robotics-journey` repo live with `phase-0`.
-**Next:** Clean code practice, testing, project structure. C++ much later.
-**Not using:** MATLAB. Ever.
+**Have:** Python, VS Code, Git/GitHub, `Robotics-Journey` repo live with `Phase 0`.
+**Next:** Clean code, testing, project structure. C++ much later. **No MATLAB. Ever.**
 
 ---
 
 ### AIM — AI / Machine Learning
-**Level: 0** · *Not started. Correctly so — the math comes first.*
+**Level: 0** · *Correctly not started. The math comes first.*
 
-**Gate:** Do not begin until MAT hits Level 3–4 (linear algebra fluent, probability started).
+**Gate:** Do not begin until MAT hits L3–4.
+**Note:** the Kalman filter is gated on **ELE**, not on math. It needs a real noisy sensor to be worth anything.
 
 ---
 
 ### PRJ — Build Projects
-**Level: 0** · ⚠️ **THE CRITICAL GAP.**
+**Level: 0** · ⚠️ **STILL THE CRITICAL GAP.**
 
-Nothing physical has been built. Nothing showable exists beyond code files.
-**This is the track that unlocks your setup budget.** Parents fund proof, not promises.
-
-**Next:** First hardware artifact. Small. Ugly. Working. Filmed.
+Nothing physical exists. **This is the track that unlocks the setup budget.** Parents fund proof, not promises.
+**Next:** The LED. Small. Ugly. Working. **Filmed.**
 
 ---
 
-## INTEGRATION
+## HONEST ASSESSMENT — 12 JULY 2026
 
-**ROBOTICSS** — the chat where tracks combine. Use it when a task needs two or more tracks at once.
-**Signature Project thread:** biorobotics / bio-inspired locomotion. This is the spine from Day 1 to application.
+**What changed:** ELE moved off zero. That matters more than everything in the four planning sessions combined.
 
----
+**What didn't:** PRJ is still zero. ELE Day 1 is *incomplete* — theory landed, nothing was built. The Arduino is out of the box and still not blinking.
 
-## HONEST ASSESSMENT — 11 JULY 2026
+**The diagnostic vindicated itself.** Voltage was wrong. Self-report would have missed it entirely. Keep answering honestly, especially when it stings.
 
-**Strong:** Mathematics. Genuinely ahead of where most 2nd-semester students are.
+**The standing risk:** comprehension mistaken for progress. Confidence 4 on a zero-artifact day is that exact error, in miniature.
 
-**Weak:** Everything else is at zero.
-
-**The pattern to break:** You're doing the comfortable track. Math is safe — it's just you and a notebook, and no one sees you fail. Hardware is uncomfortable because circuits don't work and it's visible. That's exactly why the Arduino is still in its box.
-
-**The real risk isn't laziness. It's a lopsided profile.** A person with strong linear algebra and no built robots is a maths student, not a roboticist.
-
-**Verdict:** MAT is at Level 2.5. That is enough to earn a switch. **Next session should not be maths.**
+**Verdict:** finish ELE Day 1. Not "learn more." **Build.**
 
 ---
-
 
 ## SESSION LOG
----
 
-Date: 2026-07-11
-Chat: GEN
-Covered:
-  - Goals restructured; job timeline flexible; breadth added
-  - Chat architecture + codes locked
-  - Tracker initialized (PROGRESS.md)
-  - Sem 3 calendar ingested — started 22 Jun, midterms 13 Aug
-  - Found: 23MAT222 = probability track, free
-  - Found: zero ELE/PRG coursework this sem — fully self-driven
-  - Play identified: use 23MEE282 Design Thinking as robot vehicle
-  - Teaching model replaced: DIAGNOSE → ROUTE → BRIDGE → INTEGRATE
-Artifact produced: PROGRESS.md
-Next step: ELE Day 1 — diagnostic + first circuit
-Confidence: 5
+*Newest at top.*
 
----
+### 2026-07-12 · ELE
+- Diagnostic (5Q): voltage misconception ("difference in resistance") + open/short confusion — both corrected
+- Topic 1: V/I/R via water-tank analogy; LED as diode; current-limiting resistor
+- Topic 1 quiz: 3/4. Resistor calc correct (200Ω → 220Ω). Wobble: potential vs. flow / ground
+- Topic 2: microcontroller vs. computer; digital pins as code-controlled switches; `setup()`/`loop()`; GND as return path
+- **Artifact: NONE — build not started, Day 1 incomplete**
+- **Next:** wiring plan → external LED blink → film → push `day1_blink.ino` to `ELE/`
+- Confidence: 4
+
+### 2026-07-11 · GEN
+- Goals restructured (job timeline flexible, breadth added, artifact rule)
+- Chat architecture + codes locked; tracker initialized
+- Sem 3 calendar ingested — started 22 Jun, midterms 13 Aug
+- Found: 23MAT222 = probability track, free · zero ELE/PRG coursework this sem
+- Play identified: 23MEE282 Design Thinking as robot vehicle
+- Teaching model replaced: DIAGNOSE → ROUTE → BRIDGE → INTEGRATE
+- **Artifact:** PROGRESS.md
+- **Next:** ELE Day 1
