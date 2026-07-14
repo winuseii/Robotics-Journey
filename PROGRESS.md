@@ -1,10 +1,5 @@
 # MASTER PROGRESS TRACKER
 
-**Owner:** V · **Started:** June 2026 · **Last updated:** 13 July 2026
-
-> **13 July 2026 — FIRST ARTIFACT SHIPPED.** The LED blinks. `day1_blink.ino` is in the repo. Video exists.
-> Three weeks of avoidance, ended. Everything before this was preparation. This is the first thing that is *real*.
-
 ---
 
 ## THE GOALS
@@ -21,16 +16,17 @@
 
 ## THE RULES
 
-| Rule | Value |
-|---|---|
-| Daily floor | **20 minutes. Non-negotiable.** |
-| Daily ceiling | **3 hours.** |
-| Topic rotation | User's choice — Claude forces a switch on over-indexing. |
-| Session end | Topic chats produce a SESSION LOG. **GEN does not.** |
-| GEN's job | Tracker + decisions. No learning happens here. |
-| Artifact rule | **No day completes without a tangible output.** |
-| Learning model | DIAGNOSE → ROUTE → BRIDGE → INTEGRATE |
-| Tone | Strict mentor. Blunt correction. No sugarcoating. |
+| Repo structure | By TRACK (MAT/ ELE/ DSA/ PRG/ MEC/ PRJ/). Phases are dead. |
+| Tracker updates | Claude issues PATCH BLOCKS. User edits PROGRESS.md directly. |
+
+## CAPABILITY GATES (replaces phases)
+
+| Gate | Condition | Target |
+|---|---|---|
+| G1 — It moves | Arduino reads a sensor + drives an actuator. Filmed. | End July |
+| G2 — It thinks | Sensor → filter → decision → action. Closed loop. | Sept |
+| G3 — It's designed | CAD'd, fabricated body. Not a breadboard on a table. | Oct |
+| G4 — It's autonomous | Perceives, plans, moves. Signature Project begins. | Sem 4 |
 
 ---
 
@@ -167,8 +163,6 @@
 ---
 
 ## SESSION LOG
-
-*Topic chats only. Newest at top.*
 
 ### 2026-07-13 · ELE — ⭐ FIRST ARTIFACT
 - CH340 clone confirmed on COM5
