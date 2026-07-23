@@ -11,4 +11,4 @@ void loop() {
 
 // refined my understanding of basic electrical terms (voltage, current and resistance); beyond just the theory my professors tell us to mug up.
 // understood arduino keywords like pinMode() and digitalWrite(). 
-// Made an LED blink usinging an Arduino UNO
+// Made an LED blink!!!! HAHAHAHAHA
