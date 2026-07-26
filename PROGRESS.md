@@ -1,183 +1,57 @@
-# MASTER PROGRESS TRACKER
+# PROGRESS — Dashboard
+
+**V** · synced 26 Jul 2026 (from live `Robotics_Log` in Drive)
+Full plan → `Robotics_Curriculum_v5_1_1_1.pdf` (Iron Man Protocol, project files)
+Detailed session log → `Robotics_Log` (Google Drive) — the high-frequency source of truth
 
 ---
 
-## THE GOALS
+## METHOD
+Project-driven. Builds lead; concepts pulled in on demand.
+**BIG** knowledge gap → route to the topic chat (chat + exact prompt + what to bring back). **Small** gaps handled inline.
+**MAT + DSA** on independent drip (too deep / too unforced to learn reactively).
+Every project ends in a **20-min EXTRACT**. **Artifact rule:** filmed, committed, showable.
+**Floor** 20 min/day · **Ceiling** 3 hr. `/contexts` at session start to sync across chats.
 
-1. **Master's** at a top international university.
-2. **High-paying robotics / software engineering role.** Timeline flexible — not required at graduation.
-3. **Broad engineering growth.** Genuine competence across electrical, mechanical, and software.
-4. **Prove it.** Every phase ships something showable. Setup budget expands only against visible output.
-
-**Spine:** Robotics software + the math underneath it.
-**Rule:** breadth is earned after depth. T-shaped, never flat.
-
----
-
-## THE RULES
-
-| Repo structure | By TRACK (MAT/ ELE/ DSA/ PRG/ MEC/ PRJ/). Phases are dead. |
-| Tracker updates | Claude issues PATCH BLOCKS. User edits PROGRESS.md directly. |
-
-## CAPABILITY GATES (replaces phases)
-
-| Gate | Condition | Target |
+## TRACKS
+| Track | L | Next action |
 |---|---|---|
-| G1 — It moves | Arduino reads a sensor + drives an actuator. Filmed. | End July |
-| G2 — It thinks | Sensor → filter → decision → action. Closed loop. | Sept |
-| G3 — It's designed | CAD'd, fabricated body. Not a breadboard on a table. | Oct |
-| G4 — It's autonomous | Perceives, plans, moves. Signature Project begins. | Sem 4 |
+| ELE | 2.5 | Day 2 — `digitalRead` (converges with PRJ button build) |
+| MAT | 2.5 | Eigenvalues (drip, ~2×/wk) |
+| PRG | 2 | Repo cleanup + first tests (see DEBT) |
+| MEC | 2 | Fusion 360 fundamentals |
+| **PRJ** | **2** | **Day 2 — button input (pedestrian request) or servo actuation** |
+| DSA | 0 | Big O (drip, ~1–2 problems/wk) |
+| AIM | 0 | gated on MAT L3–4 |
 
----
+*L: 0 none · 1 exposed · 2 with help · 3 alone · 4 fluent · 5 can teach*
 
-## SEMESTER 3 — KEY DATES
+## CAPABILITY GATES
+- **G1 — it moves** (sensor + actuator, filmed) → end July · *PRJ Day 2 servo/button is the doorway*
+- **G2 — it thinks** (sense → filter → decide → act) → Sept
+- **G3 — it's designed** (CAD'd, fabricated body) → Oct
+- **G4 — autonomous** → Sem 4
 
-| Event | Date |
-|---|---|
-| Semester started | 22 Jun 2026 |
-| **Fusion 360 needed by** | **End of July** |
-| **Midterms begin** | **13 Aug 2026** |
-| Onam break (build window) | 25–30 Aug 2026 |
-| Last teaching day | 23 Oct 2026 |
-| End sems begin | 29 Oct 2026 |
-| Attendance floor | 75% |
+## BUILDS
+- ✅ **Traffic light** (26 Jul) — 3 LEDs pins 8/9/10, 220Ω each, `setState`. `.ino` + video + README pushed. Bonus: traffic-pattern blink.
+- 🔴 **ACTIVE — Robowar** (design team). Need: weight class · ruleset · date · budget · fab access.
+- ⏸ **ON HOLD — ACM×ASME** (internal team issues).
+- ⭐ **NORTH STAR — SRL extra arms.** Gated until G2. Control (EMG/spare-muscle) is the hard part. Load path → pelvis.
 
-**Free ride:** 23MAT222 Probability & Complex Variables = the probability track, taught and graded.
-**Zero support:** No electrical, no programming course this semester. ELE + PRG are 100% self-driven.
-**Reinforcement:** 23MEE205 Machine Drawing ↔ Fusion 360. Same skill, two directions.
+## DEBT (fix in PRG Day 1)
+- [ ] `day3_matrix_advanced.py` — two `__main__` blocks, second clobbers first
+- [ ] README is a stub
+- [ ] zero tests anywhere
+- [ ] restructure repo by track; delete `Phase 0/`
 
----
+## SEM 3
+Midterms **13 Aug** · Onam build window **25–30 Aug** · End sems **29 Oct** · attendance **75%**
+`23MAT222` = free probability track (attend + translate)
 
-## LEVEL SCALE
+## ⚠️ RECURRING PATTERN — WATCH
+Voltage/current confusion has now surfaced and been re-closed **three times** (12 Jul, 13 Jul, 24 Jul). Root: *flow-of-substance* intuition — treating current as stuff travelling, not a rate set by the whole loop. It keeps coming back. It is not closed for good until it stops resurfacing. Next ELE session, test it cold.
 
-| L | Meaning |
-|---|---|
-| 0 | Not started |
-| 1 | Exposed — watched/read, no output |
-| 2 | Can do it with help |
-| 3 | Can do it alone, slowly |
-| 4 | Fluent — can build with it |
-| 5 | Can teach it / defend it in an interview |
-
----
-
-## TRACK STATUS
-
-### ELE — Electrical & Electronics
-**Level: 2.5** · *🔥 Day 1 COMPLETE. Artifact shipped. Fastest-moving track.*
-
-| Done | |
-|---|---|
-| ✅ | Diagnostic — 2 misconceptions surfaced and killed |
-| ✅ | V / I / R; LED as diode; current-limiting resistor |
-| ✅ | Resistor calc by hand (200Ω → 220Ω standard) |
-| ✅ | Microcontroller vs CPU; digital pins; `setup()`/`loop()`; GND |
-| ✅ | CH340 clone detected, COM5 |
-| ✅ | Wiring plan, polarity, breadboard row logic |
-| ✅ | **Built + uploaded + verified `day1_blink.ino`** (pin 13 → 220Ω → LED → GND) |
-| ✅ | **Filmed.** |
-
-**Day test:** 3.5/5. Voltage + ground now solid.
-**Misconceptions killed:** voltage as "difference in resistance" · open vs short · "resistor must come before LED."
-**⚠️ Named weakness — the Day 2 patch:** physical-layer mechanisms.
-- Diode directionality (precise, not hand-wavy)
-- **Current kills, not voltage**
-- The code → transistor → voltage chain (what *actually* happens when `digitalWrite(HIGH)` runs)
-
-**Root pattern to break:** reaching for *flow-of-substance* intuitions. Current is a **rate set by the whole loop**, not stuff travelling through it. This error has now appeared three times in different costumes.
-
-**Next:** ELE Day 2 — `digitalRead` + first input.
-
----
-
-### MAT — Mathematics
-**Level: 2.5** · *Was the over-indexed track. Now correctly parked.*
-
-✅ MIT 18.06 L1–5 · vectors, matrices, rotations from scratch · Gaussian elimination · determinant · inverse (Gauss-Jordan)
-
-**Next:** Eigenvalues & eigenvectors — 3B1B ch. 1–7, 18.06 L14, hand derivation.
-**Open challenge (still unanswered):** kinematic singularities and the pseudo-inverse.
-**Probability:** now handled by 23MAT222 coursework. Attend. Translate.
-
----
-
-### MEC — Mechanical & Dynamics
-**Level: 2** · *⏰ URGENT: Fusion 360 needed by end of July.*
-
-**Sem 3 feeds this:** Mechanics of Solids, Thermodynamics, Metallurgy, Manufacturing, Machine Drawing.
-**Next:** `Fusion 360 Fundamentals (MEC)`. Scope hard — sketch → constrain → extrude → fillet → joint → assemble → export STL. **Nothing else.**
-**License:** verify student status via SheerID with Amrita email. Downloaded ≠ licensed.
-
----
-
-### PRG — Programming & Software Engineering
-**Level: 2**
-
-**Have:** Python, VS Code, Git/GitHub, `Robotics-Journey` repo — now with `Phase 0` **and** `ELE/`.
-**Next:** Clean code, testing, project structure. C++ much later. **No MATLAB. Ever.**
-
----
-
-### DSA — Data Structures & Algorithms
-**Level: 0** · *Unlocked. Queued.*
-
-**Next:** Big O — derived properly, using your own `mat_multiply` as the specimen. Then Two Sum. Then Blind 75.
-**Why:** every serious company filters on it — and graph search (A\*, Dijkstra) *is* motion planning.
-
----
-
-### AIM — AI / Machine Learning
-**Level: 0** · *Correctly not started.*
-
-**Gate:** MAT at L3–4.
-**Kalman filter is gated on ELE, not math.** It needs a real noisy sensor to mean anything. That road runs through the breadboard.
-
----
-
-### PRJ — Build Projects
-**Level: 1** · *No longer zero. Proof-of-life exists.*
-
-**Shipped:** the blinking LED. Trivial as engineering. **Decisive as evidence.**
-
-**🔴 LIVE PROJECT — ACM × ASME**
-- First-ever collaboration between the two clubs. **1 of 5 on the ASME team.**
-- ASME owns **electrical + CAD.** ACM owns **software.**
-- Signed up for *both* electrical and design.
-- **Brief: NOT YET RECEIVED.** Chasing it 14 July.
-- Hard requirement: basic Fusion 360 by end of July. Likely 3D printing.
-- Team interest is thin — **risk of collapse. Treat as bonus, not plan.**
-- **Role to claim:** the ELE ↔ software bridge. Nobody else on ASME has the maths *and* the code *and* the hardware.
-
----
-
-## HONEST ASSESSMENT — 13 JULY 2026
-
-**The thing that changed:** you closed a loop. You said you'd finish Day 1, and you finished it. That is the first hard evidence against your own claim that you can't stay consistent. Everything else in this file is downstream of that.
-
-**The thing that hasn't changed:** one LED is not a robot. The next test isn't whether you can start — it's whether you can do it again on a day when it isn't exciting.
-
-**Standing risk:** the ACM×ASME project is a *bonus*, not the plan. Thin interest means it can die. Your own build depends on nobody and cannot be cancelled. Keep it primary.
-
-**Verdict:** ELE is the momentum track. **Do not abandon it now.** Ride it.
-
----
-
-## SESSION LOG
-
-### 2026-07-13 · ELE — ⭐ FIRST ARTIFACT
-- CH340 clone confirmed on COM5
-- Wiring plan, polarity (anode/cathode), breadboard row logic
-- **Misconception killed:** "resistor must come before LED" — series current is identical everywhere in the loop
-- **Built external blink:** pin 13 → 220Ω → LED → GND
-- Typed, uploaded, verified `day1_blink.ino` (500ms)
-- Day test: 3.5/5 — voltage/ground solid; weak on physical-layer mechanisms
-- **Artifact: `day1_blink.ino` pushed to `ELE/` + video** ✅
-- **Next:** ELE Day 2 (`digitalRead` + first input) · or DSA Day 1 · or PRJ Day 1
-- Confidence: 4
-
-### 2026-07-12 · ELE
-- Diagnostic: voltage misconception + open/short confusion — corrected
-- V/I/R, LED as diode, current-limiting resistor. Quiz 3/4
-- Microcontroller vs computer, digital pins, `setup()`/`loop()`, GND
-- **Artifact: NONE — Day 1 incomplete**
-- Confidence: 4
+## RECENT LOGS (rolling — full history in Drive)
+- **2026-07-24 · PRJ** — Traffic light built. Voltage/current confusion resurfaced → closed (per-LED current limiting, independence). Backwards-LED failure mode observed (reverse-biased diode blocks current). Artifact: `.ino` + video + README. Conf 4. → PRJ Day 2 (button/servo).
+- **2026-07-13 · ELE** — First artifact. `day1_blink.ino` pushed + filmed. Killed "resistor before LED." Conf 4.
+- **2026-07-12 · ELE** — V/I/R, LED-as-diode, resistor calc. Voltage misconception found. Artifact NONE (Day 1 incomplete). Conf 4, **gap flag X**.
