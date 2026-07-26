@@ -3,6 +3,7 @@
 **V** · synced 26 Jul 2026 (from live `Robotics_Log` in Drive)
 Full plan → `Robotics_Curriculum_v5_1_1_1.pdf` (Iron Man Protocol, project files)
 Detailed session log → `Robotics_Log` (Google Drive) — the high-frequency source of truth
+Claude, the Mentor/Sensei. Vinayak the student.
 
 ---
 
